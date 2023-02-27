@@ -45,4 +45,7 @@ def activity(message):
 def main():
     # запускаем нашего бота
     bot.infinity_polling()
+if __name__ == '__main__':
+    main()
+    
 

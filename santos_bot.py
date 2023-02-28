@@ -32,7 +32,7 @@ markup.add(item1,item2,item3)
 def activity(message):
     if message.chat.type == 'private':
         if message.text == 'Сериал 📺':
-            bot.send_message(message.chat.id,show+str(random.choice(sitcom_list)))
+            bot.send_message(message.chat.id,show+str(random.sample(sitcom_list, 1)))
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,6000)))
         elif message.text == 'Написать создателю 📝':

@@ -4,9 +4,9 @@ TOKEN = '6175249815:AAETXvUKfPMa0TPtYj-ldmvU1Bk7EA1sIBs'
 show = 'https://myshows.me/view/'
 mem = 'https://t.me/shutnikhuev/'
 sitcom_list = ["45104", "50259", "32058", "188", "32", "9", "50261", "20", "71","3596","39626", "278"]
-random_index = random.randrange(len(sitcom_list))
 from telebot import types
 import random
+random_index = random.randrange(len(sitcom_list))
 
 bot = telebot.TeleBot(TOKEN, parse_mode='html') # создание бота
 

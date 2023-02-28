@@ -4,6 +4,7 @@ TOKEN = '6175249815:AAETXvUKfPMa0TPtYj-ldmvU1Bk7EA1sIBs'
 show = 'https://myshows.me/view/'
 mem = 'https://t.me/shutnikhuev/'
 sitcom_list = ["45104", "50259", "32058", "188", "32", "9", "50261", "20", "71","3596","39626", "278"]
+random_index = random.randrange(len(sitcom_list))
 from telebot import types
 import random
 
@@ -32,7 +33,7 @@ markup.add(item1,item2,item3)
 def activity(message):
     if message.chat.type == 'private':
         if message.text == 'Сериал 📺':
-            bot.send_message(message.chat.id,show+str(random.sample(sitcom_list, 1)))
+            bot.send_message(message.chat.id,show+str(sitcom_list[random_index]))
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,6000)))
         elif message.text == 'Написать создателю 📝':

@@ -3,7 +3,7 @@ import telebot
 TOKEN = '6175249815:AAETXvUKfPMa0TPtYj-ldmvU1Bk7EA1sIBs'
 show = 'https://myshows.me/view/'
 mem = 'https://t.me/shutnikhuev/'
-sitcom_list = ["45104", "50259", "32058", "188", "32", "9", "50261", "20", "71","3596","39626", "278"]
+sitcom_list = ["45104", "50259", "32058", "188", "32", "9", "50261", "20", "71","3596","39626", "278", "220", "34737", "52910","66565", "73223", "12122","59520","59512","44645","45124","57740","6300","51692","36596","55","298"]
 from telebot import types
 import random
 

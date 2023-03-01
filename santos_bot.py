@@ -34,7 +34,7 @@ def activity(message):
         if message.text == 'Сериал 📺':
             bot.send_message(message.chat.id,show+str(random.choice(sitcom_list)))
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton('Ок, попробую')
+            item1 = types.KeyboardButton('Ок, попробую😁')
             item2 = types.KeyboardButton('Смотрел, давай другой')
             markup.add(item1,item2)
             
@@ -44,12 +44,12 @@ def activity(message):
         elif message.text == 'Написать создателю 📝':
             bot.send_message(message.chat.id,'t.me/maramaslov')
             
-        elif message.text == 'Ок, попробую':
+        elif message.text == 'Ок, попробую😁':
             bot.send.video(message,chat.id, 'https://media.giphy.com/media/jtQpRa3y7S2Ke3JvQE/giphy.gif', None, 'Text')
             
         elif message.text == 'Смотрел, давай другой':
             bot.send_message(message.chat.id,"А этот ?\n\n{0}".format(random.choice(sitcom_list)))
-            bot.send_message(message.chat.id,text="А если этот🏻")
+            
             
         else:
             bot.send_message(message.chat.id,'Я пока не понимаю текст, сорян 😕 тыкай кнопку')

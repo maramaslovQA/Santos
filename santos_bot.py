@@ -31,13 +31,12 @@ markup.add(item1,item2,item3)
 #actions for keyboard
 @bot.message_handler(content_types = ['text'])
 def activity(message):
-    if message.chat.type == 'private':
         if message.text == 'Сериал 📺':
             bot.send_message(message.chat.id,show+str(random.choice(sitcom_list)))
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            item1 = types.KeyboardButton("Ок, попробую")
-            item2 = types.KeyboardButton("Смотрел, давай другой")
-            markup.add(item1, item2)
+            item1 = types.KeyboardButton('Ок, попробую')
+            item2 = types.KeyboardButton('Смотрел, давай другой')
+            markup.add(item1,item2)
             
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,6000)))
@@ -48,7 +47,7 @@ def activity(message):
         elif message.text == 'Ок, попробую':
             bot.send.video(message,chat.id, 'https://media.giphy.com/media/jtQpRa3y7S2Ke3JvQE/giphy.gif', None, 'Text')
             
-        elif message.text == '"Смотрел, давай другой"':
+        elif message.text == 'Смотрел, давай другой':
             bot.send_message(message.chat.id,"А этот ?\n\n{0}".format(random.choice(sitcom_list)))
             
         else:

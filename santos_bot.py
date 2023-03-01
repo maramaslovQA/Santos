@@ -16,17 +16,12 @@ def start_command_handler(message):
     sti = open ('lapenko_zdravo.webp', 'rb')
     bot.send_sticker(message.chat.id, sti)
     # отправляем ответ на команду '/start'
-    bot.send_message(
-        chat_id=message.chat.id, # id чата, в который необходимо направить сообщение
-        text='Привет {0.first_name}! Я помогу тебе справиться с дофаминовым голоданием \nНажми нужную кнопку🤓'.format(message.from_user, bot.get_me()), reply_markup=markup) # текст сообщения
-    
-#Кнопки
-markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-item1 = types.KeyboardButton('Сериал 📺')
-item2 = types.KeyboardButton('Мем 🤡')
-item3 = types.KeyboardButton('Написать создателю 📝')
-
-markup.add(item1,item2,item3)
+    bot.send_message(chat_id=message.chat.id,text='Привет {0.first_name}! Я помогу тебе справиться с дофаминовым голоданием \nНажми нужную кнопку 🤓'.format(message.from_user, bot.get_me()), reply_markup=markup)   
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    item1 = types.KeyboardButton('Сериал 📺')
+    item2 = types.KeyboardButton('Мем 🤡')
+    item3 = types.KeyboardButton('Написать создателю 📝')
+    markup.add(item1,item2,item3)
 
 #actions for keyboard
 @bot.message_handler(content_types = ['text'])

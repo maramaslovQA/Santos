@@ -49,6 +49,7 @@ def activity(message):
             
         elif message.text == 'Смотрел, давай другой':
             bot.send_message(message.chat.id,"А этот ?\n\n{0}".format(random.choice(sitcom_list)))
+            bot.send_message(message.chat.id,text="А если этот🏻")
             
         else:
             bot.send_message(message.chat.id,'Я пока не понимаю текст, сорян 😕 тыкай кнопку')

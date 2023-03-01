@@ -37,7 +37,7 @@ def activity(message):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             item1 = types.KeyboardButton("Ок, попробую")
             item2 = types.KeyboardButton("Смотрел, давай другой")
-            markup.add(item1, item2))
+            markup.add(item1, item2)
             
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,6000)))

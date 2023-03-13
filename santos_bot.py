@@ -60,7 +60,7 @@ def activity(message):
           bot.send_message(message.chat.id,text="А этот?")
             
         elif message.text == 'Мем 🤡':
-            bot.send_message(message.chat.id,mem+str(random.randint(35,6000)))
+            bot.send_message(message.chat.id,mem+str(random.randint(35,5701)))
             
         elif message.text == 'Написать создателю 📝':
             bot.send_message(message.chat.id,'t.me/maramaslov')

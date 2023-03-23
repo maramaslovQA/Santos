@@ -62,7 +62,7 @@ def activity(message):
           bot.send_message(message.chat.id,text='м ?',reply_markup=markup)
         elif message.text == 'Смотрел, давай другой':
           bot.send_message(message.chat.id,show+str(random.choice(show_list)))
-          bot.send_message(message.chat.id,text="А этот?")
+          bot.send_message(message.chat.id,text='а этот?')
             
         elif message.text == 'Кино 🎬':
           bot.send_message(message.chat.id,film+str(random.choice(film_list)))
@@ -74,10 +74,10 @@ def activity(message):
             
         elif message.text == 'Давай другой':
           bot.send_message(message.chat.id,film+str(random.choice(film_list)))
-          bot.send_message(message.chat.id,text="А этот?")    
+          bot.send_message(message.chat.id,text='а этот?')    
             
         elif message.text == 'Мем 🤡':
-            bot.send_message(message.chat.id,mem+str(random.randint(35,5701)))
+            bot.send_message(message.chat.id,mem+str(random.randint(35,5762)))
             
         elif message.text == 'Написать создателю 📝':
             bot.send_message(message.chat.id,'t.me/maramaslov')

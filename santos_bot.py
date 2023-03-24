@@ -123,7 +123,10 @@ def activity(message):
           bot.send_message(message.from_user.id, 'Йо', reply_markup=markup)
         else:
             bot.send_message(message.chat.id,'Я пока не понимаю текст, сорян 😕 тыкай кнопку')
-
+            
+@bot.message_handler(content_types=['sticker'])
+def get_user_sticker(message):
+    bot.send_message(message.chat.id, '<b>Тоже люблю стикеры, неплохой)</b>')
 
 
 # главная функция программы

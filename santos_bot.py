@@ -104,7 +104,7 @@ def activity(message):
             markup.add(btn1,btn2)
             bot.send_message(message.chat.id,text='Приятного просмотра🍿',reply_markup=markup) 
             
-       elif message.text == 'Назад👆':
+        elif message.text == 'Назад👆':
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
           btn1 = types.KeyboardButton('Сериал 📺')
           btn2 = types.KeyboardButton('Кино 🎬')

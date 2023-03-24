@@ -61,10 +61,11 @@ def activity(message):
           bot.send_message(message.chat.id,show+str(random.choice(show_list)))
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
           btn1 = types.KeyboardButton('Ок, попробую')
-          btn2 = types.KeyboardButton('Смотрел, давай другой')
-          markup.add(btn1,btn2)
+          btn2 = types.KeyboardButton('Не, давай другой')
+          btn3 = types.KeyboardButton('Назад👆')
+          markup.add(btn1,btn2,btn3)
           bot.send_message(message.chat.id,text='м ?',reply_markup=markup)
-        elif message.text == 'Смотрел, давай другой':
+        elif message.text == 'Не, давай другой':
           bot.send_message(message.chat.id,show+str(random.choice(show_list)))
           bot.send_message(message.chat.id,text='а этот?')
             
@@ -73,7 +74,8 @@ def activity(message):
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
           btn1 = types.KeyboardButton('Подходит')
           btn2 = types.KeyboardButton('Давай другой')
-          markup.add(btn1,btn2)
+          btn3 = types.KeyboardButton('Назад👆')
+          markup.add(btn1,btn2,btn3)
           bot.send_message(message.chat.id,text='этот?',reply_markup=markup)
             
         elif message.text == 'Давай другой':
@@ -100,7 +102,16 @@ def activity(message):
             btn1 = types.KeyboardButton('Мем 🤡')
             btn2 = types.KeyboardButton('На главную ⤴️')
             markup.add(btn1,btn2)
-            bot.send_message(message.chat.id,text='Приятного просмотра🍿',reply_markup=markup)      
+            bot.send_message(message.chat.id,text='Приятного просмотра🍿',reply_markup=markup) 
+            
+       elif message.text == 'Назад👆':
+          markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+          btn1 = types.KeyboardButton('Сериал 📺')
+          btn2 = types.KeyboardButton('Кино 🎬')
+          btn3 = types.KeyboardButton('Мем 🤡')
+          btn4 = types.KeyboardButton('Написать создателю 📝')
+          markup.add(btn1, btn2, btn3, btn4)
+          bot.send_message(message.from_user.id, 'Йо', reply_markup=markup)
 
         elif message.text == 'На главную ⤴️':
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)

@@ -51,7 +51,7 @@ markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 btn1 = types.KeyboardButton('Сериал 📺')
 btn2 = types.KeyboardButton('Кино 🎬')
 btn3 = types.KeyboardButton('Мем 🤡')
-btn4 = types.KeyboardButton('Написать создателю 📝', url='https://t.me/maramaslov')
+btn4 = types.KeyboardButton('Написать создателю 📝')
 markup.add(btn1, btn2, btn3, btn4)
 
 #actions for keyboard

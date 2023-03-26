@@ -85,10 +85,10 @@ def activity(message):
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,5762)))
             
-        elif message.text == 'Написать создателю 📝':
+         elif message.text == 'Написать создателю 📝':
           markup = types.InlineKeyboardMarkup()
-          btn = types.InlineKeyboardButton('Написать', url='https://t.me/maramaslov')
-          markup.add(btn)
+          markup.add(types.InlineKeyboardButton('Написать', url='https://t.me/maramaslov'))
+          bot.reply_to(message, 'Пиши уже', reply_markup=markup)
                    
         elif message.text == 'Ок, попробую':
             bot.send_video(message.chat.id, 'https://media.giphy.com/media/jtQpRa3y7S2Ke3JvQE/giphy.gif', None, 'Text') 

@@ -88,7 +88,7 @@ def activity(message):
         elif message.text == 'Написать создателю 📝':
           markup = types.InlineKeyboardMarkup()
           markup.add(types.InlineKeyboardButton('Написать', url='https://t.me/maramaslov'))
-          bot.reply_to(reply_markup=markup)
+          bot.reply_to(message, '', reply_markup=markup)
                       
                    
         elif message.text == 'Ок, попробую':

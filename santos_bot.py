@@ -88,20 +88,20 @@ def activity(message):
           bot.send_message(message.chat.id,text='м ?',reply_markup=markup)
         elif message.text == 'Не, давай другой':
           bot.send_message(message.chat.id,show+str(random.choice(show_list)))
-          bot.send_message(message.chat.id,text='а этот?')
+          bot.send_message(message.chat.id,text='Будешь смотреть?')
             
         elif message.text == 'Кино 🎬':
           bot.send_message(message.chat.id,film+str(random.choice(film_list)))
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-          btn1 = types.KeyboardButton('Подходит')
-          btn2 = types.KeyboardButton('Давай другой')
+          btn1 = types.KeyboardButton('Буду')
+          btn2 = types.KeyboardButton('Не, давай другой')
           btn3 = types.KeyboardButton('Назад👆')
           markup.add(btn1,btn2,btn3)
-          bot.send_message(message.chat.id,text='этот?',reply_markup=markup)
+          bot.send_message(message.chat.id,text='Будешь смотреть?',reply_markup=markup)
             
-        elif message.text == 'Давай другой':
+        elif message.text == 'Не, давай другой':
           bot.send_message(message.chat.id,film+str(random.choice(film_list)))
-          bot.send_message(message.chat.id,text='а этот?')    
+          bot.send_message(message.chat.id,text='Будешь смотреть?')    
             
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,5762)))
@@ -120,7 +120,7 @@ def activity(message):
             markup.add(btn1,btn2)
             bot.send_message(message.chat.id,text='Приятного просмотра🍿',reply_markup=markup)  
             
-        elif message.text == 'Подходит':
+        elif message.text == 'Буду':
             bot.send_video(message.chat.id, 'https://media.giphy.com/media/Wq9OL6EwSeJCetv6Zi/giphy.gif', None, 'Text') 
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton('Мем 🤡')

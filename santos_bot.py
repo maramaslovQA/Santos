@@ -88,20 +88,20 @@ def activity(message):
           bot.send_message(message.chat.id,text='м ?',reply_markup=markup)
         elif message.text == 'Не, давай другой':
           bot.send_message(message.chat.id,show+str(random.choice(show_list)))
-          bot.send_message(message.chat.id,text='Будешь смотреть?')
+          bot.send_message(message.chat.id,text='а этот?')
             
         elif message.text == 'Кино 🎬':
           bot.send_message(message.chat.id,film+str(random.choice(film_list)))
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
           btn1 = types.KeyboardButton('Буду')
-          btn2 = types.KeyboardButton('Не, давай другой')
+          btn2 = types.KeyboardButton('Давай другой')
           btn3 = types.KeyboardButton('Назад👆')
           markup.add(btn1,btn2,btn3)
           bot.send_message(message.chat.id,text='Будешь смотреть?',reply_markup=markup)
             
-        elif message.text == 'Не, давай другой':
+        elif message.text == 'Давай другой':
           bot.send_message(message.chat.id,film+str(random.choice(film_list)))
-          bot.send_message(message.chat.id,text='Будешь смотреть?')    
+          bot.send_message(message.chat.id,text='а этот будешь?')    
             
         elif message.text == 'Мем 🤡':
             bot.send_message(message.chat.id,mem+str(random.randint(35,5762)))

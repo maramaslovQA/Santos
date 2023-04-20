@@ -1,7 +1,7 @@
 
 import telebot
 
-TOKEN = 'ТОКЕН'
+TOKEN = '6175249815:AAETXvUKfPMa0TPtYj-ldmvU1Bk7EA1sIBs'
 show = 'https://myshows.me/view/'
 film = 'https://www.kinopoisk.ru/film/'
 mem = 'https://t.me/shutnikhuev/'
@@ -121,7 +121,7 @@ def activity(message):
             bot.send_message(message.chat.id,text='Приятного просмотра🍿',reply_markup=markup)  
             
         elif message.text == 'Буду':
-            bot.send_video(message.chat.id, 'https://media.giphy.com/media/Wq9OL6EwSeJCetv6Zi/giphy.gif', None, 'Text') 
+            bot.send_video(message.chat.id, 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTNmZTllNDZlN2Y0Yzk3NzQxZDY5NGE3MDdmOTBjMzczNTI0NGM4YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/Tf3wJ6e9k4xmWaH825/giphy.gif', None, 'Text') 
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton('Мем 🤡')
             btn2 = types.KeyboardButton('На главную ⤴️')

@@ -1,7 +1,7 @@
 
 import telebot
 
-TOKEN = 'ТОКЕН'
+TOKEN = '6175249815:AAETXvUKfPMa0TPtYj-ldmvU1Bk7EA1sIBs'
 show = 'https://myshows.me/view/'
 film = 'https://www.kinopoisk.ru/film/'
 mem = 'https://t.me/shutnikhuev/'
@@ -151,7 +151,7 @@ def activity(message):
         elif message.text == 'Написать создателю 📝':
           markup = types.InlineKeyboardMarkup()
           markup.add(types.InlineKeyboardButton('Написать', url='https://t.me/maramaslov'))
-          bot.reply_to(message, '_', reply_markup=markup)
+          bot.reply_to(message, '👇', reply_markup=markup)
                       
                    
         elif message.text == 'Ок, попробую':
@@ -177,7 +177,7 @@ def activity(message):
           btn3 = types.KeyboardButton('Мем 🤡')
           btn4 = types.KeyboardButton('Написать создателю 📝')
           markup.add(btn1, btn2, btn3, btn4)
-          bot.send_message(message.from_user.id, 'Йо', reply_markup=markup)
+          bot.send_message(message.from_user.id, 'Давай попробуем ещё', reply_markup=markup)
 
         elif message.text == 'На главную ⤴️':
           markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -186,7 +186,7 @@ def activity(message):
           btn3 = types.KeyboardButton('Мем 🤡')
           btn4 = types.KeyboardButton('Написать создателю 📝')
           markup.add(btn1, btn2, btn3, btn4)
-          bot.send_message(message.from_user.id, 'Йо', reply_markup=markup)
+          bot.send_message(message.from_user.id, 'Тыкай кнопку', reply_markup=markup)
         else:
             bot.send_message(message.chat.id,'Я пока не понимаю текст, сорян 😕 тыкай кнопку')
             

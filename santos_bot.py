@@ -146,7 +146,7 @@ def activity(message):
           bot.send_message(message.chat.id,text='а этот будешь?')    
             
         elif message.text == 'Мем 🤡':
-            bot.send_message(message.chat.id,mem+str(random.randint(35,5762)))
+            bot.send_message(message.chat.id,mem+str(random.randint(35,6369)))
             
         elif message.text == 'Написать создателю 📝':
           markup = types.InlineKeyboardMarkup()

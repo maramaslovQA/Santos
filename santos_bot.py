@@ -1,7 +1,7 @@
 
 import telebot
 
-TOKEN = 'token'
+TOKEN = '6175249815:AAETXvUKfPMa0TPtYj-ldmvU1Bk7EA1sIBs'
 show = 'https://myshows.me/view/'
 film = 'https://www.kinopoisk.ru/film/'
 mem = 'https://t.me/shutnikhuev/'
